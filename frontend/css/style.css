@@ -1,0 +1,38 @@
+[hidden] { display: none !important; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; margin: 0; background: #f5f5f4; color: #1c1917; }
+header { padding: 32px 24px 8px; max-width: 1100px; margin: auto; }
+h1 { margin: 0 0 4px; font-size: 32px; }
+header p { margin: 0; color: #57534e; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px; padding: 16px 24px; max-width: 1100px; margin: auto; }
+.controls input, .controls select, .controls button, .upload span {
+  padding: 10px 14px; border-radius: 10px; border: 1px solid #d6d3d1; font-size: 15px; background: white;
+}
+.upload input { display: none; }
+.upload span { display: inline-block; cursor: pointer; }
+#go { background: #1c1917; color: white; border: none; cursor: pointer; }
+#go:disabled { opacity: 0.5; cursor: wait; }
+#status { max-width: 1100px; margin: 0 auto; padding: 0 24px; color: #57534e; }
+
+.analysis { display: flex; gap: 24px; max-width: 1100px; margin: 16px auto; padding: 0 24px; align-items: flex-start; }
+.analysis img { width: 200px; border-radius: 12px; object-fit: cover; }
+.analysis h2 { margin-top: 0; }
+#attrs { list-style: none; padding: 0; margin: 0; line-height: 1.9; }
+#attrs b { display: inline-block; width: 80px; }
+.swatch { display: inline-block; width: 14px; height: 14px; border-radius: 50%; vertical-align: middle; border: 1px solid #ccc; margin-right: 6px; }
+.unsure { color: #a8a29e; font-size: 13px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px;
+        max-width: 1100px; margin: 16px auto 48px; padding: 0 24px; }
+.card { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+        display: flex; flex-direction: column; }
+.card img { width: 100%; aspect-ratio: 1; object-fit: cover; background: #e7e5e4; }
+.card .body { padding: 12px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.card h3 { font-size: 14px; margin: 0; font-weight: 600; }
+.card .store { font-size: 13px; color: #78716c; }
+.card .price { font-size: 18px; font-weight: 700; margin-top: auto; }
+.card .match { font-size: 12px; color: #78716c; }
+.card a { display: block; text-align: center; padding: 10px; background: #1c1917; color: white; text-decoration: none; font-size: 14px; }
+
+@media (max-width: 600px) { .analysis { flex-direction: column; } }
