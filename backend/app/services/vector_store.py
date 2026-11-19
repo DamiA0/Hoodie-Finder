@@ -1,8 +1,9 @@
+from pathlib import Path
 import chromadb
 
-client = chromadb.PersistentClient(path="data/chroma")
+DB_PATH = Path(__file__).resolve().parents[2] / "data" / "chroma"
+client = chromadb.PersistentClient(path=str(DB_PATH))
 col = client.get_or_create_collection("hoodies", metadata={"hnsw:space": "cosine"})
-
 
 def add_product(product, vector):
     meta = {k: (v if isinstance(v, (str, int, float)) else str(v))
